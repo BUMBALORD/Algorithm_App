@@ -11738,3 +11738,24 @@ Completed 200 OK in 270ms (Views: 269.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/application.self-600a72ace1d9036c4dc860a6331bc1d0c049f8aada9cb675b0b2ca17d559761b.css?body=1" for ::1 at 2016-05-10 13:56:13 -0700
+
+
+Started GET "/" for ::1 at 2016-05-10 14:57:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 752ms (Views: 737.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4b34460839b7f0b45fb95c9336977a294453c9b82cd3576f4b754c0d73ab8254.css?body=1" for ::1 at 2016-05-10 14:57:49 -0700
+
+
+Started GET "/assets/school.png" for ::1 at 2016-05-10 14:57:49 -0700
+
+
+Started GET "/algos" for ::1 at 2016-05-10 14:57:50 -0700
+Processing by AlgosController#index as HTML
+  [1m[35mAlgo Load (0.5ms)[0m  SELECT "algos".* FROM "algos" WHERE "algos"."fav" = 't'
+  [1m[36mAlgo Load (0.1ms)[0m  [1mSELECT "algos".* FROM "algos"[0m
+  Rendered algos/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 223ms (Views: 213.9ms | ActiveRecord: 1.0ms)
