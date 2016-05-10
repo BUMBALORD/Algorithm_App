@@ -1,0 +1,11 @@
+<h1> <%= @algo.name %> </h1>
+
+<p>
+  Algorithm: <%= @algo.algorithm %>
+</p>
+<div class="field">
+    <%= form_for :algo, url: algo_path(@algo), method: :patch do |f| %>
+    <% end %>
+</div>
+
+<p><%= link_to 'Back', algos_path %></p>

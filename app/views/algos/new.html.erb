@@ -1,0 +1,22 @@
+<h1> Add an Algorithm </h1>
+
+<%= form_for :algo, url: algos_path do |f|  %>
+  <p>
+    <%= f.label :name  %>
+    <br>
+    <%= f.text_field :name  %>
+  </p>
+
+  <p>
+    <%= f.label :algorithm  %>
+    <br>
+    <%= f.text_field :algorithm  %>
+  </p>
+
+  <p>
+    <%= f.submit  %>
+    <% if flash[:error] %>
+      <p> <%= flash[:error] %>
+    <% end %>
+  </p>
+<% end %>

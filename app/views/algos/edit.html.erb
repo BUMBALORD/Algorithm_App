@@ -1,0 +1,30 @@
+<h1>Editing <%= @algo.name %></h1>
+
+<%= form_for :algo, url: algo_path(@algo), method: :patch do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :algorithm %><br>
+    <%= f.text_area :algorithm %>
+  </p>
+
+  <p>
+    <%= f.label "Add to Favorites" %><br>
+    <%= f.check_box :fav %> <br>
+  </p>
+
+  <p>
+    <%= f.submit %>
+    <% if flash[:error] %>
+      <p> <%= flash[:error] %>
+    <% end %>
+  </p>
+
+<% end %>
+
+<p><%= link_to 'Back', algos_path %></p>
+<p><%= link_to 'Delete Algorithm', algo_path(@algo), method: :delete, data: {confirm: 'Are you sure?'}  %></p>

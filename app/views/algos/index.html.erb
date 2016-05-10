@@ -1,0 +1,18 @@
+
+<h1 class="header topmarg"> All Algorithms </h1>
+
+<h2 class="header topmarg"> Favorites </h2>
+  <% @favorites.each do |fav|  %>
+    <h2 class="header topmarg"><%= p fav.name %></h2>
+    <p class="header shortwide topmarg"><%= p fav.algorithm %></p>
+  <% end %>
+
+<h2 class="header topmarg"> All Algorithms </h2>
+  <% @algos.each do |algo| %>
+    <h2 class="header topmarg"><%= p algo.name %></h2>
+    <p class="header shortwide topmarg"><%= p algo.algorithm %></p>
+    <p class="header topmargless"><%= link_to "Edit", edit_algo_path(algo) %></p>
+  <% end %>
+
+<h3 class="header topmarg"> Add a new algorithm:</h3>
+<p class="header topmargless"><%= link_to "New", new_algo_path %></p>
