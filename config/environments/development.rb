@@ -7,7 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
   config.assets.cache_store = :null_store  # Disables the Asset cache
   config.sass.cache = false  # Disable the SASS compiler cache
-
+  config.cache_store = :null_store
   # Do not eager load code on boot.
   config.eager_load = false
 
