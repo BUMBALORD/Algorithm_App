@@ -1,24 +1,25 @@
 
-<h1 class="header topmarg"> All Algorithms </h1>
+<h1 class="center topmarg"> All Algorithms </h1>
 
-<button id="favBtn"> Open Favorites </button>
+<button id="favBtn" class="centerbtn topmarg"> Open Favorites </button>
 
 <div id="favModal" class="modal">
   <div class="favmodal-content">
     <span class="close">x</span>
-    <h2> Favorites </h2>
-      <% @favorites.each do |fav|  %>
-        <h2><%= p fav.name %></h2>
-        <p><%= p fav.algorithm %></p>
-      <% end %>
+      <ul><h2 class="center"> Favorites </h2>
+        <% @favorites.each do |fav|  %>
+          <li><h2 class="center topmarg"><%= p fav.name %></h2></li>
+          <li><p class="center topmarg"><%= p fav.algorithm %></p></li>
+        <% end %>
+      </ul>
   </div>
 </div>
 
-<h2 class="header topmarg"> All Algorithms </h2>
+
   <% @algos.each do |algo| %>
-    <h2 class="header topmarg"><%= p algo.name %></h2>
-    <p class="header shortwide topmarg"><%= p algo.algorithm %></p>
-    <p class="header topmargless"><%= link_to "Edit", edit_algo_path(algo) %></p>
+    <h2 class="center topmarg"><%= p algo.name %></h2>
+    <p class="center shortwide topmarg"><%= p algo.algorithm %></p>
+    <p class="center topmargless"><%= link_to "Edit", edit_algo_path(algo) %></p>
   <% end %>
 
 <h3 class="header topmarg"> Add a new algorithm:</h3>

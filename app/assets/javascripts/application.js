@@ -15,18 +15,18 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-$(document).ready(function() {
 
+$(document).ready(function() {
 
   var modal = document.getElementById("favModal");
   var btn = document.getElementById("favBtn");
-  var span = document.getElementByClassName("close")[0];
-  debugger
-  btn.onClick = function() {
+  var span = document.getElementsByClassName("close")[0];
+  // debugger
+  btn.onclick = function() {
     modal.style.display = "block";
   };
 
-  span.onClick = function() {
+  span.onclick = function() {
     modal.style.display = "none";
   };
 
