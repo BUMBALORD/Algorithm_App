@@ -1,22 +1,22 @@
-<h1> Add an Algorithm </h1>
+<h1 class="center topmarg"> Add an Algorithm </h1>
 
 <%= form_for :algo, url: algos_path do |f|  %>
-  <p>
+  <p class="center topmarg">
     <%= f.label :name  %>
     <br>
     <%= f.text_field :name  %>
   </p>
 
-  <p>
+  <p class="center topmarg">
     <%= f.label :algorithm  %>
     <br>
     <%= f.text_field :algorithm  %>
   </p>
 
-  <p>
+  <p class="center topmarg">
     <%= f.submit  %>
     <% if flash[:error] %>
-      <p> <%= flash[:error] %>
+      <p class="center topmarg"> <%= flash[:error] %>
     <% end %>
   </p>
 <% end %>

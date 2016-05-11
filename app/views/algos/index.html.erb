@@ -9,7 +9,7 @@
       <ul><h2 class="center"> Favorites </h2>
         <% @favorites.each do |fav|  %>
           <li><h2 class="center topmarg"><%= p fav.name %></h2></li>
-          <li><p class="center topmarg"><%= p fav.algorithm %></p></li>
+          <li><p class="center topmarg shortwide"><%= p fav.algorithm %></p></li>
         <% end %>
       </ul>
   </div>
@@ -22,5 +22,5 @@
     <p class="center topmargless"><%= link_to "Edit", edit_algo_path(algo) %></p>
   <% end %>
 
-<h3 class="header topmarg"> Add a new algorithm:</h3>
-<p class="header topmargless"><%= link_to "New", new_algo_path %></p>
+<h3 class="center topmarg"> Add a new algorithm:</h3>
+<p class="center topmargless bottommarg"><%= link_to "New", new_algo_path %></p>

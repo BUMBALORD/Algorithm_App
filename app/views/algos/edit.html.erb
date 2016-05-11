@@ -1,23 +1,23 @@
-<h1>Editing <%= @algo.name %></h1>
+<h1 class="center topmarg">Editing <%= @algo.name %></h1>
 
 <%= form_for :algo, url: algo_path(@algo), method: :patch do |f| %>
 
-  <p>
+  <p class="center topmarg">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
 
-  <p>
+  <p class="center shortwide topmarg">
     <%= f.label :algorithm %><br>
     <%= f.text_area :algorithm %>
   </p>
 
-  <p>
+  <p class="center topmarg">
     <%= f.label "Add to Favorites" %><br>
     <%= f.check_box :fav %> <br>
   </p>
 
-  <p>
+  <p class="center topmarg">
     <%= f.submit %>
     <% if flash[:error] %>
       <p> <%= flash[:error] %>
@@ -26,5 +26,4 @@
 
 <% end %>
 
-<p><%= link_to 'Back', algos_path %></p>
-<p><%= link_to 'Delete Algorithm', algo_path(@algo), method: :delete, data: {confirm: 'Are you sure?'}  %></p>
+<p class="center topmarg bottommarg"><%= link_to 'Delete Algorithm', algo_path(@algo), method: :delete, data: {confirm: 'Are you sure?'}  %></p>

@@ -1,11 +1,11 @@
-<h1> <%= @algo.name %> </h1>
+<h1 class="center topmarg"> <%= @algo.name %> </h1>
 
-<p>
+<p class="center shortwide topmarg">
   Algorithm: <%= @algo.algorithm %>
 </p>
-<div class="field">
+<div class="field center topmarg">
     <%= form_for :algo, url: algo_path(@algo), method: :patch do |f| %>
     <% end %>
 </div>
 
-<p><%= link_to 'Back', algos_path %></p>
+<p class="center topmarg"><%= link_to 'Back', algos_path %></p>

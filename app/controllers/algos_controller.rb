@@ -22,7 +22,10 @@ class AlgosController < ApplicationController
 
     if @algo.save
       flash[:notice] = "Algorithm Created!"
-      redirect_to @algo
+      respond_to do |format|
+        format.html { redirect_to @algo }
+        format.js
+      end
     else
       flash[:error] = "Your Algorithm could not be created!"
       render 'new'

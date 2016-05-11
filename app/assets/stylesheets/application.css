@@ -45,6 +45,10 @@ body {
   margin-top: 2em;
 }
 
+.bottommarg {
+  margin-bottom: 5em;
+}
+
 .topmargless {
   margin-top: 0.5em;
 }
@@ -67,12 +71,13 @@ body {
   background-repeat: repeat-x repeat-y;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
+  border: 5px solid #f8f8ff;
+  border-radius: 25px;
+  width: 80%;
 }
 
 .close {
-  color: #aaa;
+  color: #000000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -87,4 +92,11 @@ body {
 
 ul {
   list-style-type:none
+}
+
+li {
+  list-style-type:none;
+  text-align: center;
+  padding: 0;
+  clear: left;
 }
