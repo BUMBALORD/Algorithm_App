@@ -15,3 +15,25 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+
+
+  var modal = document.getElementById("favModal");
+  var btn = document.getElementById("favBtn");
+  var span = document.getElementByClassName("close")[0];
+  debugger
+  btn.onClick = function() {
+    modal.style.display = "block";
+  };
+
+  span.onClick = function() {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+});

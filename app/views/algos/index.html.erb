@@ -1,11 +1,18 @@
 
 <h1 class="header topmarg"> All Algorithms </h1>
 
-<h2 class="header topmarg"> Favorites </h2>
-  <% @favorites.each do |fav|  %>
-    <h2 class="header topmarg"><%= p fav.name %></h2>
-    <p class="header shortwide topmarg"><%= p fav.algorithm %></p>
-  <% end %>
+<button id="favBtn"> Open Favorites </button>
+
+<div id="favModal" class="modal">
+  <div class="favmodal-content">
+    <span class="close">x</span>
+    <h2> Favorites </h2>
+      <% @favorites.each do |fav|  %>
+        <h2><%= p fav.name %></h2>
+        <p><%= p fav.algorithm %></p>
+      <% end %>
+  </div>
+</div>
 
 <h2 class="header topmarg"> All Algorithms </h2>
   <% @algos.each do |algo| %>
