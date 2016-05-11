@@ -19,6 +19,11 @@
   <% @algos.each do |algo| %>
     <h2 class="center topmarg"><%= p algo.name %></h2>
     <p class="center shortwide topmarg"><%= p algo.algorithm %></p>
+      <% algo.comments.each do |comment| %>
+        <p class="center shortwide topmarg"><%= p comment.commenter %> says:</p>
+        <p class="center shortwide"><%= p comment.body %></p>
+      <% end %>
+    <p class="center topmargless"><%= link_to "Show", algo_path(algo) %></p>
     <p class="center topmargless"><%= link_to "Edit", edit_algo_path(algo) %></p>
   <% end %>
 
