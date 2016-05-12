@@ -23,6 +23,9 @@
 
 <h2 class="center topmarg">Add a comment:</h2>
   <%= form_for([@algo, @algo.comments.build]) do |f| %>
+    <% if flash[:error] %>
+      <p class="center topmarg red"> <%= flash[:error] %>
+    <% end %>
     <p class="center topmarg">
       <%= f.label :commenter %><br>
       <%= f.text_field :commenter %>
