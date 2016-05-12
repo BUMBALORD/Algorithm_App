@@ -1,16 +1,20 @@
 <h1 class="center topmarg"> Add an Algorithm </h1>
 
+<div class="picdiv topmarg">
+    <%= image_tag("comp.png") %>
+</div>
+
 <%= form_for :algo, url: algos_path do |f|  %>
   <p class="center topmarg">
     <%= f.label :name  %>
     <br>
-    <%= f.text_field :name  %>
+    <%= f.text_field :name, size: "30x1"  %>
   </p>
 
   <p class="center topmarg">
     <%= f.label :algorithm  %>
     <br>
-    <%= f.text_field :algorithm  %>
+    <%= f.text_field :algorithm, size: "60x30"  %>
   </p>
 
   <p class="center topmarg">
@@ -20,3 +24,4 @@
     <% end %>
   </p>
 <% end %>
+<p class="center topmarg"><%= link_to 'Back', algos_path %></p>

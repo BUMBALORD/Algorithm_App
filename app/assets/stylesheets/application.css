@@ -38,7 +38,7 @@ body {
 }
 
 .shortwide {
-  max-width: 30em;
+  max-width: 40em;
 }
 
 .topmarg {
@@ -99,4 +99,14 @@ li {
   text-align: center;
   padding: 0;
   clear: left;
+}
+
+.picdiv {
+  display: table;
+  margin: 0 auto;
+}
+
+img {
+  height: 10em;
+  margin-top: 1em;
 }
